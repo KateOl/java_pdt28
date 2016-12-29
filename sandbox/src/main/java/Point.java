@@ -2,44 +2,22 @@
 
 public class Point {
 
-    private double x;
-    private double y;
+    public static double x1=10,y1=15;
+    public static double x2=15,y2=21.3;
+    public static double c=(x1-x2);
+    public static double d=(y1-y2);
+    public static double a; // points
+    public static double b;
 
-    Point(){
-        setX(0);
-        setY(0);
-    }
 
-    Point(double x, double y){
-        setX(x);
-        setY(y);
-    }
 
-    Point(Point point){
-        setX(point.getX());
-        setY(point.getY());
-    }
+    public static void main(String[] args) {
 
-    public void setX(double x){
-        this.x = x;
-    }
+       Point p = new Point();
 
-    public double getX(){
-        return x;
-    }
+        System.out.println(Math.sqrt(Math.pow(c, 2) + Math.pow(d, 2)));
 
-    public void setY(double y){
-        this.y = y;
-    }
-
-    public double getY(){
-        return y;
-    }
-
-    public double distance(Point point){
-        return Math.sqrt(Math.pow((this.x - point.getX()), 2) + Math.pow((this.y - point.getY()), 2));
-    }
-
+        } //main
 
 
 } //class
