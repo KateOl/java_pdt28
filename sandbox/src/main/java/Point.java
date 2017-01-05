@@ -2,12 +2,10 @@
 
 public class Point {
 
-    private double x1,y1;
-    private double x2,y2;
-    private double c=(x1-x2);
-    private double d=(y1-y2);
-    private double a; // points
-    private double b;
+    private double x1,y1;  // p1
+    private double x2,y2; // p2
+
+    // Gettery settery
 
     public void setX1(double x1) {
         this.x1 = x1;
@@ -25,19 +23,49 @@ public class Point {
         this.y2 = y2;
     }
 
+
+    // Constructors
+
+    public  Point (){}
+
+    public Point (double x1, double y1){
+
+        this.x1 = x1;
+        this.y1 = y1;
+
+    }
+
+    // main
+
     public static void main(String[] args) {
 
-       Point p = new Point();
+       Point p1 = new Point(25.3, 15.2);
+        Point p2 = new Point(10, 10.3);
 
-        p.setX1(25.3);
-        p.setX2(10);
-        p.setY1(15.2);
-        p.setY2(10.3);
+        /*p1.setX1(25.3);
+        p2.setX2(10);
+        p1.setY1(15.2);
+        p2.setY2(10.3);*/
+
+        System.out.println(distance(p1, p2));
 
 
-        System.out.println(Math.sqrt(Math.pow(p.c, 2) + Math.pow(p.d, 2)));
 
         } //main
+
+
+    // Functions
+
+    public static double distance (Point p1, Point p2) {
+
+      double res = 0;
+
+       res = Math.sqrt(Math.pow((p1.x1-p2.x2), 2) + Math.pow((p1.y1-p2.y2), 2));
+
+
+        return res;
+
+    }
 
 
 } //class
