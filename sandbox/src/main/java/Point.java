@@ -42,10 +42,6 @@ public class Point {
        Point p1 = new Point(25.3, 15.2);
         Point p2 = new Point(10, 10.3);
 
-        /*p1.setX1(25.3);
-        p2.setX2(10);
-        p1.setY1(15.2);
-        p2.setY2(10.3);*/
 
         System.out.println(distance(p1, p2));
 
